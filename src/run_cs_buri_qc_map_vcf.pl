@@ -24,14 +24,14 @@ $sourcedir=$ARGV[1];
 `faCount $sourcedir/dm6_hologenome.fa | grep -v \\# | cut -f1,2 > $sourcedir/dm6_hologenome.sizes`;
 
 # set up list of sample names
-@samples = ("TZ_GGACTCCT-TAGATCGC", "TP_TAGGCATG-TAGATCGC", "JC_AGGCAGAA-TAGATCGC", "HS_TCCTGAGC-TAGATCGC");
+@samples = ("TZ_GGACTCCT-TAGATCGC", "TP_TAGGCATG-TAGATCGC", "JC_AGGCAGAA-TAGATCGC", "HS_TCCTGAGC-TAGATCGC", "BS_CGTACTAG-TAGATCGC");
 
 # submit fastQC, bowtie, bedtools and samtools jobs
 foreach $sample (@samples) {
 	for ($lane=1; $lane<5; $lane++) {
 		$run="$sample"."_L00"."$lane";
 		$input1="$sample"."_L00"."$lane"."_R1_001.fastq.gz";
-		$input1="$sample"."_L00"."$lane"."_R2_001.fastq.gz";
+		$input2="$sample"."_L00"."$lane"."_R2_001.fastq.gz";
 		system("qsub -l cores=6 -l mem=128 -V -b y -cwd -o $HOME/out -e $HOME/out -N fastq_1_$run \"fastqc --extract $sourcedir/$input1\"");	
 		system("qsub -l cores=6 -l mem=128 -V -b y -cwd -o $HOME/out -e $HOME/out -N fastq_1_$run \"fastqc --extract $sourcedir/$input2\"");		
 		system("qsub -l cores=6 -l mem=128 -V -b y -cwd -o $HOME/out -e $HOME/out -N map_$run \"bowtie2 -p 6 -x $sourcedir/dm6_hologenome.fa -1 $sourcedir/$input1 -2 $sourcedir/$input2 | samtools view -bS - | samtools sort - $sourcedir/$run\"");	
