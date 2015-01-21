@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
-$sourcedir=$ARGV[0];
+$HOME=$ARGV[0];
+$sourcedir=$ARGV[1];
 
 # get and unpack D. melanogaster reference sequence
 `wget -q -P $sourcedir http://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.gz`;
