@@ -3,8 +3,8 @@
 sample_alias	tax_id	scientific_name	common_name	anonymized_name	sample_title	sample_description	sex	tissue_type
 #template	7227	Drosophila melanogaster	fruit fly				Female	Whole organism
 #units								
-CS_TP	7227	Drosophila melanogaster	fruit fly	CS_TP	Canton-S (subline TP)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Tim Tully Lab via Thomas Preat)	Female	Whole organism
-CS_TZ	7227	Drosophila melanogaster	fruit fly	CS_TZ	Canton-S (subline TZ)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Martin Heisenberg Lab via Troy Zars)	Female	Whole organism
-CS_JC	7227	Drosophila melanogaster	fruit fly	CS_JC	Canton-S (subline JC)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Thomas Preat Lab via Julien Colomb)	Female	Whole organism
-CS_BS	7227	Drosophila melanogaster	fruit fly	CS_BS	Canton-S (subline BS)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Ralf Greenspan Lab via Bruno van Swinderen)	Female	Whole organism
-CS_HS	7227	Drosophila melanogaster	fruit fly	CS_HS	Canton-S (subline HS)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Ulrike Heberlein Lab via Henrike Scholz)	Female	Whole organism
+CS_TP	7227	Drosophila melanogaster	fruit fly	CS_TP	Canton-S (sub-strain TP)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Tim Tully Lab via Thomas Preat)	Female	Whole organism
+CS_TZ	7227	Drosophila melanogaster	fruit fly	CS_TZ	Canton-S (sub-strain TZ)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Martin Heisenberg Lab via Troy Zars)	Female	Whole organism
+CS_JC	7227	Drosophila melanogaster	fruit fly	CS_JC	Canton-S (sub-strain JC)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Thomas Preat Lab via Julien Colomb)	Female	Whole organism
+CS_BS	7227	Drosophila melanogaster	fruit fly	CS_BS	Canton-S (sub-strain BS)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Ralf Greenspan Lab via Bruno van Swinderen)	Female	Whole organism
+CS_HS	7227	Drosophila melanogaster	fruit fly	CS_HS	Canton-S (sub-strain HS)	Whole genome shotgun sequences of DNA extracted from 20 females from a Canton-S wild-type laboratory strain (source: Ulrike Heberlein Lab via Henrike Scholz)	Female	Whole organism
