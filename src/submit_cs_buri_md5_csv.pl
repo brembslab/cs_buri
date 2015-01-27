@@ -39,7 +39,7 @@ foreach $sample (@samples) {
 		@elements = split (/\s+/, $line);
 		$reverse_file_md5 = $elements[0];
 
-	print CSV "$sample_alias\t$instrument_model\t$sample_alias\t$library_source\t$library_selection\t$library_strategy\t$design_description\t$library_construction_protocol\t$insert_size\t$forward_file_name\t$forward_file_md5\t$reverse_file_name\t$reverse_file_md5\n";
+	print CSV "CS_$sample_alias\t$instrument_model\t$sample_alias\t$library_source\t$library_selection\t$library_strategy\t$design_description\t$library_construction_protocol\t$insert_size\t$forward_file_name\t$forward_file_md5\t$reverse_file_name\t$reverse_file_md5\n";
 	print FOFN "$inputdir/$forward_file_name\n$inputdir/$reverse_file_name\n";
 	}
 }
