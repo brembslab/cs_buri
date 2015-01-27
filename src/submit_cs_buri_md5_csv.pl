@@ -10,6 +10,7 @@ $library_selection="RANDOM";
 $library_strategy="WGS";
 $design_description="genome resequencing";
 $library_construction_protocol="Nextera DNA Sample Preparation Kit (Product No. FC-121-1030)";
+$insert_size="200";
 
 # set up list of sample names
 @samples = ("TZ_GGACTCCT-TAGATCGC", "TP_TAGGCATG-TAGATCGC", "JC_AGGCAGAA-TAGATCGC", "HS_TCCTGAGC-TAGATCGC", "BS_CGTACTAG-TAGATCGC");
@@ -17,8 +18,7 @@ $library_construction_protocol="Nextera DNA Sample Preparation Kit (Product No. 
 open (CSV, ">$paired_fastq_file");
 open (FOFN, ">$fofn");
 
-print CSV "sample_alias\tinstrument_model\tlibrary_name\tlibrary_source\tlibrary_selection\tlibrary_strategy\tdesign_description\tlibrary_construction_protocol\tforward_file_name\tforward_file_md5\treverse_file_name\treverse_file_md5\n";
-
+print CSV "sample_alias\tinstrument_model\tlibrary_name\tlibrary_source\tlibrary_selection\tlibrary_strategy\tdesign_description\tlibrary_construction_protocol\tinsert_size\tforward_file_name\tforward_file_md5\treverse_file_name\treverse_file_md5\n";
 # make md5 sums and print to .csv and .fofn files
 foreach $sample (@samples) {
 	for ($lane=1; $lane<5; $lane++) {
@@ -39,8 +39,8 @@ foreach $sample (@samples) {
 		@elements = split (/\s+/, $line);
 		$reverse_file_md5 = $elements[0];
 
-		print CSV "$sample_alias\t$instrument_model\t$sample_alias\t$library_source\t$library_selection\t$library_strategy\t$design_description\t$library_construction_protocol\t$forward_file_name\t$forward_file_md5\t$reverse_file_name\t$reverse_file_md5\n";
-		print FOFN "$inputdir/$forward_file_name\n$outputdir/$forward_file_name.md5\n$inputdir/$reverse_file_name\n$outputdir/$reverse_file_name.md5\n";
+	print CSV "$sample_alias\t$instrument_model\t$sample_alias\t$library_source\t$library_selection\t$library_strategy\t$design_description\t$library_construction_protocol\t$insert_size\t$forward_file_name\t$forward_file_md5\t$reverse_file_name\t$reverse_file_md5\n";
+	print FOFN "$inputdir/$forward_file_name\n$inputdir/$reverse_file_name\n";
 	}
 }
 
