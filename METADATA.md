@@ -18,7 +18,8 @@ assay:
 creator:
  - orcid: 0000-0001-7824-7650
    name: Bjoern Brembs
- - name: Casey Bergman
+ - orcid: 0000-0002-5462-9854
+   name: Casey Bergman
 paper: doi:10.12688/f1000research.4263.2
 license: http://creativecommons.org/publicdomain/zero/1.0
 species: NCBITaxon:7227
